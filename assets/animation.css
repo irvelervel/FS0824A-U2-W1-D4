@@ -1,0 +1,65 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes boxColor {
+  0% {
+    background-color: darkgreen;
+    transform: rotate(0deg);
+    color: white;
+  }
+
+  50% {
+    background-color: red;
+    transform: rotate(300deg);
+  }
+
+  90% {
+    transform: rotate(-300deg);
+  }
+
+  100% {
+    background-color: cyan;
+    transform: rotate(0deg);
+    color: black;
+  }
+}
+
+@keyframes boxPositions {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  30% {
+    transform: translate(400px);
+  }
+
+  55% {
+    transform: translate(300px, -200px);
+  }
+
+  80% {
+    transform: translate(150px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.box-animated {
+  text-align: center;
+  /* animation: nome durata curva-di-accelerazione ritardo numero-di-volte fill-mode */
+  animation: boxColor 3s linear 0s 1 forwards;
+}
+
+.box-moving {
+  text-align: center;
+  background-color: indigo;
+  color: white;
+  animation: boxPositions 4s ease 0s infinite;
+}
