@@ -1,0 +1,62 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 {
+  background-color: darkmagenta;
+  color: white;
+  /* applichiamo ora una TRANSITION, una transizione; va applicata tradizionalmente allo stato NORMALE dell'elemento (non nel :hover) */
+  /* la sintassi è questa: */
+  /* transition: proprietà durata curva-di-acc. ritardo */
+  transition: width 2s cubic-bezier(0.26, 1.28, 0.86, -0.1) 0s;
+}
+
+.box-1:hover {
+  /* l'hover è un effetto che si attiva al passaggio del mouse sull'elemento */
+  width: 500px;
+}
+
+.box-2 {
+  background-color: yellow;
+  /* nello stato normale dell'elemento... */
+  transition: background-color 2.5s linear 0s;
+}
+
+.box-2:hover {
+  background-color: cyan;
+}
+
+.box-3 {
+  background-color: cornflowerblue;
+  color: white;
+  transition: all 3s ease 0s;
+  /* con all selezionate TUTTI i cambiamenti che avvengono all'hover */
+  /* volendo è possibile transizionare individualmente singole proprietà, tutte nella stessa "transition" */
+  /* transition: transform 3s ease 0s, background-color 1s linear 1s; */
+}
+
+.box-3:hover {
+  transform: rotate(1300deg);
+  background-color: deeppink;
+}
+
+.box-4 {
+  background-color: cornflowerblue;
+  color: white;
+  transition: all 1s ease 0s;
+  /* questa ora è diventata l'OUT */
+}
+
+.box-4:hover {
+  transform: rotate(1300deg);
+  background-color: deeppink;
+  transition: all 3s ease 0s;
+  /* questa ora è diventata l'IN */
+}
+
+/* se vogliamo dare una transizione separata tra IN e OUT, dobbiamo indicare DUE volte la proprietà transition; una (come sempre) nello stato NORMALE dell'elemento, e una ANCHE nello stato di hover!
+ */
