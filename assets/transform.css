@@ -1,0 +1,36 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate {
+  background-color: darkorchid;
+  color: white;
+  transform: rotate(45deg);
+}
+
+.skew {
+  background-color: limegreen;
+  color: white;
+  transform: skew(10deg, 15deg);
+}
+
+.scale {
+  background-color: orange;
+  transform: scale(1.4);
+}
+
+.translate {
+  background-color: blue;
+  color: white;
+  transform: translate3d(50px, -60px, 50px);
+}
+
+.multiple {
+  background-color: chocolate;
+  color: white;
+  transform: scale(1.2) rotate(40deg);
+}
