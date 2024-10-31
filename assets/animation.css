@@ -51,6 +51,18 @@
   }
 }
 
+@keyframes crazy {
+  0% {
+    transform: translate(0px) rotate(0deg);
+    font-size: 1em;
+  }
+
+  100% {
+    transform: translate(500px) rotate(800deg);
+    font-size: 5em;
+  }
+}
+
 .box-animated {
   text-align: center;
   /* animation: nome durata curva-di-accelerazione ritardo numero-di-volte fill-mode */
@@ -62,4 +74,28 @@
   background-color: indigo;
   color: white;
   animation: boxPositions 4s ease 0s infinite;
+}
+
+.box-crazy {
+  text-align: center;
+  background-color: coral;
+  color: white;
+}
+
+.animated {
+  animation: crazy 3s linear 0s infinite alternate;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container button {
+  width: 50px;
+  background-color: lime;
+  color: black;
+  border: 1px solid lime;
+  border-radius: 20%;
 }
